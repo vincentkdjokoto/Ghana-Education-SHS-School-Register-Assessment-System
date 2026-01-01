@@ -1,0 +1,14 @@
+# Create application directory
+sudo mkdir -p /opt/school-mis
+sudo chown -R $USER:$USER /opt/school-mis
+
+# Clone repository
+git clone https://github.com/yourusername/ghana-school-mis.git /opt/school-mis
+
+# Install dependencies
+cd /opt/school-mis/backend
+npm install --production
+
+cd ../frontend
+npm install --production
+npm run build
