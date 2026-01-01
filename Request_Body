@@ -1,0 +1,15 @@
+{
+  "studentId": "ST001",
+  "academicYear": "2024/2025",
+  "term": "First Term",
+  "classLevel": "SHS1",
+  "programme": "General Science",
+  "subjects": [
+    {
+      "subjectCode": "ENG",
+      "subjectName": "English Language",
+      "classScore": 35,
+      "examScore": 55
+    }
+  ]
+}
