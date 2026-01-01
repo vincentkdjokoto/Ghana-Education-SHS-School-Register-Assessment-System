@@ -1,0 +1,23 @@
+{
+  "summary": {
+    "totalStudents": 500,
+    "totalClasses": 15,
+    "averageScore": 68.5,
+    "promotionRate": 85.2
+  },
+  "classPerformance": [
+    {
+      "className": "SHS1 Science",
+      "averageScore": 72.3,
+      "topStudent": "Kwame Amoah",
+      "promotionRate": 92.1
+    }
+  ],
+  "programmeComparison": [
+    {
+      "programme": "General Science",
+      "averageScore": 75.2,
+      "students": 150
+    }
+  ]
+}
