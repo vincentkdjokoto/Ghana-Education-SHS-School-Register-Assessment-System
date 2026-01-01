@@ -1,0 +1,13 @@
+# Connect to MongoDB
+mongosh
+
+# Create database and user
+use school_mis
+db.createUser({
+  user: "school_mis_user",
+  pwd: "secure_password",
+  roles: ["readWrite"]
+})
+
+# Exit
+exit
