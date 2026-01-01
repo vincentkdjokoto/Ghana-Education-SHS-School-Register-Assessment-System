@@ -1,0 +1,10 @@
+# Update system weekly
+sudo apt update
+sudo apt upgrade -y
+
+# Update Node.js packages
+cd /opt/school-mis/backend
+npm update
+
+cd ../frontend
+npm update
