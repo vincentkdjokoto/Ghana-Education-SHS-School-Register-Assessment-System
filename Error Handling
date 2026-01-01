@@ -1,0 +1,5 @@
+{
+  "success": false,
+  "error": "Error message",
+  "code": "ERROR_CODE"
+}
