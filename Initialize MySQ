@@ -1,0 +1,8 @@
+# Log in to MySQL
+mysql -u root -p
+
+# Run initialization script
+source /opt/school-mis/database/init.sql
+
+# Insert sample data
+source /opt/school-mis/database/sample_data.sql
