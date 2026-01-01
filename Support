@@ -1,0 +1,59 @@
+
+### **docs/Deployment_Guide.md**
+```markdown
+# Ghana School MIS Deployment Guide
+
+## Table of Contents
+1. [System Requirements](#system-requirements)
+2. [Quick Start](#quick-start)
+3. [Manual Installation](#manual-installation)
+4. [Docker Deployment](#docker-deployment)
+5. [Configuration](#configuration)
+6. [Database Setup](#database-setup)
+7. [SSL Configuration](#ssl-configuration)
+8. [Backup & Recovery](#backup--recovery)
+9. [Monitoring](#monitoring)
+10. [Troubleshooting](#troubleshooting)
+
+## System Requirements
+
+### Minimum Requirements
+- **CPU**: 2 cores
+- **RAM**: 4GB
+- **Storage**: 20GB SSD
+- **OS**: Ubuntu 20.04 LTS or later
+
+### Software Requirements
+- **Node.js**: 18.x or later
+- **npm**: 9.x or later
+- **MongoDB**: 6.0 or later
+- **MySQL**: 8.0 or later (optional)
+- **Nginx**: 1.18 or later
+- **Git**: Latest version
+
+### Recommended Requirements
+- **CPU**: 4 cores
+- **RAM**: 8GB
+- **Storage**: 100GB SSD
+- **Backup**: Daily automated backups
+- **SSL**: Let's Encrypt certificate
+
+## Quick Start
+
+### Using Docker (Recommended)
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/ghana-school-mis.git
+cd ghana-school-mis
+
+# Copy environment file
+cp backend/.env.example backend/.env
+
+# Edit environment variables
+nano backend/.env
+
+# Start with Docker Compose
+docker-compose up -d
+
+# View logs
+docker-compose logs -f
