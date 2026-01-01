@@ -1,0 +1,33 @@
+{
+  "name": "ghana-school-management-system",
+  "version": "1.0.0",
+  "description": "Comprehensive School MIS for Ghanaian Senior High Schools",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "nodemon backend/server.js",
+    "client": "cd frontend && npm start",
+    "dev:full": "concurrently \"npm run dev\" \"npm run client\"",
+    "test": "jest",
+    "build": "cd frontend && npm run build",
+    "install:all": "npm install && cd frontend && npm install",
+    "docker:build": "docker-compose build",
+    "docker:up": "docker-compose up",
+    "docker:down": "docker-compose down",
+    "seed": "node database/seed.js"
+  },
+  "keywords": [
+    "school-mis",
+    "ghana-education",
+    "ges",
+    "shs",
+    "academic-management"
+  ],
+  "author": "School MIS Team",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "concurrently": "^8.0.0",
+    "nodemon": "^2.0.0"
+  }
+}
