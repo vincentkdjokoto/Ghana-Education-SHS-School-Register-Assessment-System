@@ -1,0 +1,3 @@
+cd /opt/school-mis/backend
+cp .env.example .env
+nano .env  # Edit with your configuration
