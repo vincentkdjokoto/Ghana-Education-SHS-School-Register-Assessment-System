@@ -1,0 +1,9 @@
+{
+  "success": true,
+  "token": "eyJhbGciOiJIUzI1NiIs...",
+  "user": {
+    "id": "1",
+    "username": "admin",
+    "role": "Admin"
+  }
+}
