@@ -1,0 +1,10 @@
+{
+  "academicYear": "2024/2025",
+  "term": "Third Term",
+  "thresholds": {
+    "promotionScore": 50,
+    "maxFailedSubjects": 2,
+    "conditionalScore": 40,
+    "conditionalMaxFailed": 3
+  }
+}
