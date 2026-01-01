@@ -1,0 +1,34 @@
+
+## **HOW TO UPLOAD TO GITHUB**
+
+### **Step 1: Create GitHub Repository**
+1. Go to https://github.com
+2. Click "New repository"
+3. Name: `ghana-school-mis`
+4. Description: "Ghana Senior High School Management Information System"
+5. Choose: Public or Private
+6. Don't initialize with README (we'll add ours)
+
+### **Step 2: Prepare Your Files**
+Create a folder on your computer and copy all the above files into their respective directories.
+
+### **Step 3: Initialize Git Repository**
+```bash
+# Navigate to your project folder
+cd ghana-school-mis
+
+# Initialize git
+git init
+
+# Add all files
+git add .
+
+# Commit files
+git commit -m "Initial commit: Complete Ghana School MIS with all features"
+
+# Add remote repository
+git remote add origin https://github.com/yourusername/ghana-school-mis.git
+
+# Push to GitHub
+git branch -M main
+git push -u origin main
