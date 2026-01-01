@@ -1,0 +1,19 @@
+{
+  "students": [
+    {
+      "id": "ST001",
+      "admissionNumber": "GS20240001",
+      "firstName": "Kwame",
+      "lastName": "Amoah",
+      "programme": "General Science",
+      "class": "SHS1",
+      "status": "Active"
+    }
+  ],
+  "pagination": {
+    "page": 1,
+    "limit": 20,
+    "total": 150,
+    "pages": 8
+  }
+}
