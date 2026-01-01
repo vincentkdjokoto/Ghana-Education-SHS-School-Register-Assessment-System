@@ -1,0 +1,9 @@
+# Make script executable
+chmod +x scripts/setup.sh
+
+# Run setup script (as root)
+sudo ./scripts/setup.sh
+
+# Initialize application
+cd /opt/school-mis
+./init.sh
