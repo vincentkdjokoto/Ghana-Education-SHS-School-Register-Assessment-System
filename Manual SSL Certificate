@@ -1,0 +1,7 @@
+# Generate self-signed certificate (for testing)
+sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
+  -keyout /etc/ssl/private/schoolmis.key \
+  -out /etc/ssl/certs/schoolmis.crt
+
+# Update Nginx configuration
+sudo nano /etc/nginx/sites-available/school-mis
