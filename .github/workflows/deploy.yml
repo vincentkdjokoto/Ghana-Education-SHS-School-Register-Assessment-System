@@ -1,0 +1,54 @@
+name: Deploy Ghana School MIS
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    strategy:
+      matrix:
+        node-version: [18.x]
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+    
+    - name: Install Dependencies
+      run: |
+        cd backend
+        npm ci
+        cd ../frontend
+        npm ci
+    
+    - name: Run Tests
+      run: |
+        cd backend
+        npm test
+    
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Deploy to Server
+      env:
+        DEPLOY_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        SERVER_IP: ${{ secrets.SERVER_IP }}
+        SERVER_USER: ${{ secrets.SERVER_USER }}
+      run: |
+        echo "$DEPLOY_KEY" > deploy_key
+        chmod 600 deploy_key
+        scp -o StrictHostKeyChecking=no -i deploy_key -r . $SERVER_USER@$SERVER_IP:/opt/school-mis/
+        ssh -o StrictHostKeyChecking=no -i deploy_key $SERVER_USER@$SERVER_IP "cd /opt/school-mis && ./update.sh"
