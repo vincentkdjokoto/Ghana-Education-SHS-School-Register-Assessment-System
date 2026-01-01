@@ -1,0 +1,5 @@
+# Manual backup
+/opt/school-mis/scripts/backup.sh
+
+# Restore from backup
+/opt/school-mis/backups/restore.sh --backup school-mis-backup-20240101_120000.tar.gz
